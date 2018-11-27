@@ -7,7 +7,7 @@
 #ifndef __STATESPACE_H
 #define __STATESPACE_H
 
-#include "smc/default/dynamic/dynamic.h"
+#include "main/algorithms/smc/default/dynamic/dynamic.h"
 
 /// Computes (part of the) unnormalised "future" target density needed for 
 /// backward or ancestor sampling.

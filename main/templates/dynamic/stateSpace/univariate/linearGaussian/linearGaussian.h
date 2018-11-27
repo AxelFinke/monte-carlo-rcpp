@@ -7,8 +7,8 @@
 #ifndef __LINEARGAUSSIAN_H
 #define __LINEARGAUSSIAN_H
 
-#include "templates/dynamic/stateSpace/univariate/univariate.h"
-#include "rng/gaussian.h"
+#include "main/templates/dynamic/stateSpace/univariate/univariate.h"
+#include "main/rng/gaussian.h"
 
 ///////////////////////////////////////////////////////////////////////////////
 /// Some types

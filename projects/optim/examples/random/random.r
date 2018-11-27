@@ -7,7 +7,7 @@
 rm(list = ls())
 set.seed(123)
 
-pathToBase   <- "/home/axel/Dropbox/research/code/cpp/mc"
+pathToBase   <- "/home/axel/Dropbox/research/code/cpp/monte-carlo-rcpp"
 exampleName  <- "random"
 projectName  <- "optim"
 

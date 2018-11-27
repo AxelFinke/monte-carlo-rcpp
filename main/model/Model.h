@@ -8,8 +8,8 @@
 #define __MODEL_H
 
 #include <omp.h> 
-#include "rng/Rng.h"
-#include "helperFunctions.h"
+#include "main/rng/Rng.h"
+#include "main/helperFunctions/helperFunctions.h"
 
 // [[Rcpp::depends("RcppArmadillo")]]
 
@@ -58,12 +58,13 @@ public:
     modelParameters_.setKnownParameters(hyperParameters);
     marginaliseParameters_ = false;
   }
-  /// Constructing the Model class without data.
+/*  /// Constructing the Model class without data.
   Model
   (
     Rng& rng,
     const arma::colvec& hyperParameters,
     const arma::colvec& theta,
+    const arma::colvec& extraParameters,
     const unsigned int nObservations,
     const unsigned int nCores
   ) : 
@@ -80,7 +81,7 @@ public:
     modelParameters_.setUnknownParameters(theta);
     marginaliseParameters_ = false;
 //     std::cout << "end body of Model constructor" << std::endl;
-  } 
+  }*/ 
   /// Constructing the Model class without data and without
   /// specifying the number of observations nor the unknown parameters.
   Model

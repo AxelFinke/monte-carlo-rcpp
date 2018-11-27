@@ -8,7 +8,7 @@
 #ifndef __UNIVARIATE_H
 #define __UNIVARIATE_H
 
-#include "model/default/dynamic/stateSpace/stateSpace.h"
+#include "main/model/default/dynamic/stateSpace/stateSpace.h"
 
 /// Holds a single particle
 typedef double Particle;

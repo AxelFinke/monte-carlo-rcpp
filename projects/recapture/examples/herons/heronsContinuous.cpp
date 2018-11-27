@@ -2,9 +2,9 @@
 #include <RcppArmadillo.h>
 // #include <gperftools/profiler.h>
 
-#include "mcmc/pmmh.h"
-#include "smc/SmcSampler.h"
-#include "examples/herons/herons.h"
+#include "main/algorithms/mcmc/pmmh.h"
+#include "main/algorithms/smc/SmcSampler.h"
+#include "main/applications/herons/herons.h"
 #include "time.h"
 
 // TODO: disable range checks (by using at() for indexing elements of cubes/matrices/vectors)

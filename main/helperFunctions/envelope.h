@@ -17,7 +17,7 @@
 #include <math.h>
 #include <limits>
 
-#include "helperFunctions.h"
+#include "main/helperFunctions/helperFunctions.h"
 
 namespace envelope
 {

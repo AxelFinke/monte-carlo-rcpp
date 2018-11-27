@@ -13,9 +13,9 @@
 #include <omp.h>
 #include <random>
 #include <vector>
-#include "rng/Rng.h"
-#include "rng/gaussian.h"
-#include "helperFunctions.h"
+#include "main/rng/Rng.h"
+#include "main/rng/gaussian.h"
+#include "main/helperFunctions/helperFunctions.h"
 
 namespace kalman
 {

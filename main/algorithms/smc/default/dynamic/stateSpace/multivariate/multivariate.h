@@ -8,8 +8,8 @@
 #ifndef __MULTIVARIATE_H
 #define __MULTIVARIATE_H
 
-#include "smc/default/dynamic/stateSpace/stateSpace.h"
-#include "smc/default/single.h"
+#include "main/algorithms/smc/default/dynamic/stateSpace/stateSpace.h"
+#include "main/algorithms/smc/default/single.h"
 
 
 /// Holds a single particle

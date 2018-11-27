@@ -7,9 +7,9 @@
 #ifndef __HERONSDISCRETE_H
 #define __HERONSDISCRETE_H
 
-#include "base/templates/dynamic/stateSpace/stateSpace.h"
-#include "base/mcmc/Mcmc.h"
-#include "base/rng/gaussian.h"
+#include "main/templates/dynamic/stateSpace/stateSpace.h"
+#include "main/algorithms/mcmc/Mcmc.h"
+#include "main/rng/gaussian.h"
 
 // [[Rcpp::depends("RcppArmadillo")]]
 

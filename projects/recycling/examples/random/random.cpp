@@ -1,10 +1,10 @@
 #include <RcppArmadillo.h>
 
-#include "mcmc/pmmh.h"
-#include "smc/SmcSampler.h"
+#include "main/algorithms/mcmc/pmmh.h"
+#include "main/algorithms/smc/SmcSampler.h"
 #include "time.h"
 
-#include "examples/random/random.h"
+#include "main/applications/random/random.h"
 
 // TODO: disable range checks (by using at() for indexing elements of cubes/matrices/vectors)
 // once the code is tested; 
@@ -76,7 +76,8 @@ Rcpp::List simulateDataCpp
 {
   LatentPath latentPath;
   Observations observations;
-  simulateData<ModelParameters, LatentVariable, LatentPath, LatentPathRepar, Observations>(nObservations hyperParameters, theta, latentPath, observations, nCores);
+  arma::colvec extraParameters; // not used here
+  simulateData<ModelParameters, LatentVariable, LatentPath, LatentPathRepar, Observations>(nObservations, hyperParameters, theta, extraParameters, latentPath, observations, nCores);
   return Rcpp::List::create(Rcpp::Named("x") = latentPath, Rcpp::Named("y") = observations);
 }
 
@@ -129,6 +130,7 @@ Rcpp::List runSmcSamplerCpp
   /////////////////////////////////////////////////////////////////////////////
   
 //     std::cout << "set up Model class" << std::endl;
+  
   
   Model<ModelParameters, LatentVariable, LatentPath, LatentPathRepar, Observations> model(rngDerived, hyperParameters, observations, nCores);
   model.setSupport(support);

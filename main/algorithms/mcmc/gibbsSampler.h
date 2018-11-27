@@ -11,9 +11,9 @@
 #ifndef __GIBBSSAMPLER_H
 #define __GIBBSSAMPLER_H
 
-#include "/smc/Smc.h"
-#include "/ehmm/Ehmm.h"
-#include "/mwg/Mwg.h"
+#include "main/algorithms/smc/Smc.h"
+// #include "main/ehmm/Ehmm.h" // TODO: this file should not depend on Ehmm.h!
+#include "main/algorithms/mwg/Mwg.h"
 
 /// Type of Monte Carlo algorithm used to sample the latent states
 enum SamplerType 

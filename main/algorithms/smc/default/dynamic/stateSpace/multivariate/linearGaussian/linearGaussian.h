@@ -8,8 +8,8 @@
 #ifndef __LINEARGAUSSIAN_H
 #define __LINEARGAUSSIAN_H
 
-#include "smc/default/dynamic/stateSpace/multivariate/multivariate.h"
-#include "rng/gaussian.h"
+#include "main/algorithms/smc/default/dynamic/stateSpace/multivariate/multivariate.h"
+#include "main/rng/gaussian.h"
 
 
 

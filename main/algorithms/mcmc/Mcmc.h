@@ -6,7 +6,7 @@
 #ifndef __MCMC_H
 #define __MCMC_H
 
-#include "model/Model.h"
+#include "main/model/Model.h"
 
 // [[Rcpp::depends("RcppArmadillo")]]
 

@@ -1,30 +1,9 @@
 ## PMMH with delayed acceptance in the "herons" capture-recapture model
-
-print("WARNING: WE HAVE SHIFTED fDaysCovar by one time period!")
-
-
-## TODO:
-
-## -- IMPLEMENT & RUN MODEL WITH CONSTANT PRODUCTIVITY
-## -- IMPLEMENT GAUSSIAN APPROXIMATION-VERSIONS OF ALL MODELS
-## -- ONLY USE DISCRETE UNIFORM INITIAL DISTRIBUTION! (remove parameters delta0 and delta1)
-## -- try double tempering again! (probably doesn't work)
-## -- check ESJD of the MCMC kernels
-## -- try MCWM updates
-## -- test SMC samplers on simulated data
-
-#### more speculative:
-## -- CSMC updates (would require a different tempering approach?)
-## -- can we use Pieralberto's stuff as a proposal?
-## -- some other sequence of target distributions?
-
-
-
 rm(list = ls())
 set.seed(123)
 
-pathToInputBase   <- "/home/axel/Dropbox/research/code/cpp/mc"
-pathToOutputBase  <- "/home/axel/Dropbox/research/output/cpp/mc"
+pathToInputBase   <- "/home/axel/Dropbox/research/code/cpp/monte-carlo-rcpp" # put the path to the monte-carlo-rcpp directory here
+pathToOutputBase  <- "/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp" # put the path to the folder which whill contain the simulation output here
 
 exampleName       <- "herons"
 projectName       <- "recapture"

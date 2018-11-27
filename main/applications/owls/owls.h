@@ -7,9 +7,9 @@
 #ifndef __OWLS_H
 #define __OWLS_H
 
-#include "base/templates/dynamic/stateSpace/stateSpace.h"
-#include "base/mcmc/Mcmc.h"
-#include "base/rng/gaussian.h"
+#include "main/templates/dynamic/stateSpace/stateSpace.h"
+#include "main/algorithms/mcmc/Mcmc.h"
+#include "main/rng/gaussian.h"
 
 // [[Rcpp::depends("RcppArmadillo")]]
 
@@ -646,7 +646,7 @@ void Model<ModelParameters, LatentVariable, LatentPath, LatentPathRepar, Observa
 }
 /// Simulates count data from state-space model.
 template <class ModelParameters, class LatentVariable, class LatentPath, class LatentPathRepar, class Observations> 
-void Model<ModelParameters, LatentVariable, LatentPath, LatentPathRepar, Observations>::simulateData()
+void Model<ModelParameters, LatentVariable, LatentPath, LatentPathRepar, Observations>::simulateData(const arma::colvec& extraParameters)
 {
   observations_.count_.set_size(nObservations_); // TODO: need to make sure that nObservations_ is set correctly
   latentPath_.set_size(modelParameters_.getDimLatentVariable(), nObservations_);

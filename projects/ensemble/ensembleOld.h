@@ -9,7 +9,7 @@
 #ifndef __ENSEMBLEOLD_H
 #define __ENSEMBLEOLD_H
 
-#include "model/Model.h"
+#include "main/model/Model.h"
 
 // [[Rcpp::depends("RcppArmadillo")]]
 

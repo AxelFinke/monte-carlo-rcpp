@@ -8,8 +8,8 @@
 #ifndef __UNIVARIATE_H
 #define __UNIVARIATE_H
 
-#include "smc/default/static/static.h"
-#include "smc/default/single.h"
+#include "algorithms/smc/default/static/static.h"
+#include "algorithms/smc/default/single.h"
 
 /// Holds a single particle
 typedef double Particle;

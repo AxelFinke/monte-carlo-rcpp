@@ -8,8 +8,8 @@
 #ifndef __UNIVARIATE_H
 #define __UNIVARIATE_H
 
-#include "templates/static/static.h"
-#include "smc/default/single.h"
+#include "main/templates/static/static.h"
+#include "main/algorithms/smc/default/single.h"
 
 ///////////////////////////////////////////////////////////////////////////////
 /// Some types

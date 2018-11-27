@@ -7,7 +7,7 @@
 #ifndef __DYNAMIC_H
 #define __DYNAMIC_H
 
-#include "smc/Smc.h"
+#include "main/algorithms/smc/Smc.h"
 
 
 #endif

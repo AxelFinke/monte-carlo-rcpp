@@ -7,7 +7,7 @@
 #define __MWG_H
 
 #include <time.h> 
-#include "model/Model.h"
+#include "main/model/Model.h"
 
 // [[Rcpp::depends("RcppArmadillo")]]
 

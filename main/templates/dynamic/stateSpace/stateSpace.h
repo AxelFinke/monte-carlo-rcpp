@@ -7,7 +7,7 @@
 #ifndef __STATESPACE_H
 #define __STATESPACE_H
 
-#include "templates/dynamic/dynamic.h"
+#include "main/templates/dynamic/dynamic.h"
 
 ///////////////////////////////////////////////////////////////////////////////
 /// Some types

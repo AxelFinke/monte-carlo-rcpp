@@ -80,8 +80,8 @@ col3Shade <- rgb(col3Numeric[1], col3Numeric[2], col3Numeric[3], alpha)
 col4Shade <- rgb(col4Numeric[1], col4Numeric[2], col4Numeric[3], alpha)
 
 projectName       <- "recapture"
-pathToInputBase   <- "/home/axel/Dropbox/research/code/cpp/mc"
-pathToOutputBase  <- "/home/axel/Dropbox/research/output/cpp/mc"
+pathToInputBase   <- "/home/axel/Dropbox/research/code/cpp/monte-carlo-rcpp" # put the path to the monte-carlo-rcpp directory here
+pathToOutputBase  <- "/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp" # put the path to the folder which whill contain the simulation output here
 
 pathToPaper <- "/home/axel/Dropbox/ATI - SSmodel/manuscript_backup/2017-07-27"
 pathToPaperFigures <- file.path(pathToPaper, "temp")
@@ -104,7 +104,7 @@ exampleName <- "owls"
 jobName <- "smc_sge_array_2017-08-03"
 # jobName <- "smc_sge_array_debug"
 source(file=file.path(pathToInputBase, "setupRCpp.r")) # load parameters used for the simulation study
-source(file="/home/axel/Dropbox/research/code/cpp/mc/recapture/recaptureFunctions.r")
+source(file="/home/axel/Dropbox/research/code/cpp/monte-carlo-rcpp/projects/recapture/recaptureFunctions.r")
 # 
 # jobName <- "smc_sge_array_2017-08-04"
 # idxReplicates <- (1:20)[-c(9,17,2)]
@@ -200,11 +200,11 @@ idxConfigurations <- 1:16
 
 ## Benchmark results:
 
-pathToResultsBenchmark <- "~/Dropbox/research/output/cpp/mc/recapture/owls/mcmc_sge_array_2017-08-05/results"
+pathToResultsBenchmark <- "~/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recapture/owls/mcmc_sge_array_2017-08-05/results"
 
 # jobName <- "smc_sge_array_2017-08-03" 
 # source(file=file.path(pathToInputBase, "setupRCpp.r")) # load parameters used for the simulation study
-# source(file="/home/axel/Dropbox/research/code/cpp/mc/recapture/recaptureFunctions.r")
+# source(file="/home/axel/Dropbox/research/code/cpp/monte-carlo-rcpp/projects/recapture/recaptureFunctions.r")
 # 
 # idxReplicatesBenchmark <-(1:20)[-c(8,10,19)] # indices of independent replicates used by the simulation study
 # pathToResultsBenchmark <- pathToResults
@@ -221,7 +221,7 @@ jobName <- "smc_sge_array_2017-08-06"
 idxReplicatesSingle <- (1:89)[-c(40,60,64,70,71,74,75,76,85,86,87,89)]
 
 source(file=file.path(pathToInputBase, "setupRCpp.r")) # load parameters used for the simulation study
-source(file="/home/axel/Dropbox/research/code/cpp/mc/recapture/recaptureFunctions.r")
+source(file="/home/axel/Dropbox/research/code/cpp/monte-carlo-rcpp/projects/recapture/recaptureFunctions.r")
 
 
 pathToResultsSingle <- pathToResults
@@ -237,7 +237,7 @@ logEvidenceEstimatesSingle <- readRDS(file.path(pathToProcessed, paste("standard
 jobName <- "smc_sge_array_2017-08-07"
 idxReplicatesDouble <- (1:100)[-c(2,3,24,26,27,29,32,34,35,38,39,42,43,46,47,50,52,53,54,55,56,59,60,63,64,67,73,74,77)] # indices of independent replicates used by the simulation study
 source(file=file.path(pathToInputBase, "setupRCpp.r")) # load parameters used for the simulation study
-source(file="/home/axel/Dropbox/research/code/cpp/mc/recapture/recaptureFunctions.r")
+source(file="/home/axel/Dropbox/research/code/cpp/monte-carlo-rcpp/projects/recapture/recaptureFunctions.r")
 
 pathToResultsDouble <- pathToResults
 processOutputSmc(pathToResults=pathToResultsDouble, pathToProcessed=pathToProcessed, idxConfigurations=idxConfigurations, idxReplicates=idxReplicatesDouble)
@@ -430,8 +430,8 @@ source(file=file.path(pathToInputBase, "setupRCpp.r")) # load parameters used fo
 miscParameters <- list(pathToCovar=pathToCovar, pathToData=pathToData, pathToFigures=pathToFigures, pathToInputBase=pathToInputBase, pathToOutputBase=pathToOutputBase)
 
 
-# pathToMcmcResults <- "/home/axel/Dropbox/research/output/cpp/mc/recapture/owls/mcmc_sge_array_2017-06-07/results/"
-pathToMcmcResults <- "/home/axel/Dropbox/research/output/cpp/mc/recapture/owls/mcmc_sge_array_2017-07-30/results/"
+# pathToMcmcResults <- "/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recapture/owls/mcmc_sge_array_2017-06-07/results/"
+pathToMcmcResults <- "/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recapture/owls/mcmc_sge_array_2017-07-30/results/"
 MAX_SIM_MCMC <- 2
 
 ii <- 1
@@ -521,7 +521,7 @@ if (imageType != "none") {
   
 
 
-cpuTime <- readRDS("/home/axel/Dropbox/research/output/cpp/mc/recapture/owls/smc_sge_array_2017-07-29/processed/cpuTime.rds")
+cpuTime <- readRDS("/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recapture/owls/smc_sge_array_2017-07-29/processed/cpuTime.rds")
 print(rowMeans(cpuTime / 3600)*60, digits=1)
 
 
@@ -822,7 +822,7 @@ for (ii in 1:length(idxConfigurations)) {
 }
 
 
-cpuTime <- readRDS("/home/axel/Dropbox/research/output/cpp/mc/recapture/herons/smc_sge_array_2017-06-29/processed/cpuTime.rds")
+cpuTime <- readRDS("/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recapture/herons/smc_sge_array_2017-06-29/processed/cpuTime.rds")
 
 
 print(matrix(rowMeans(cpuTime / 3600), 9, 3), digits=1)

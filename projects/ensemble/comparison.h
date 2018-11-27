@@ -7,11 +7,11 @@
 #ifndef __COMPARISON_H
 #define __COMPARISON_H
 
-#include "model/Model.h"
-#include "mcmc/Mcmc.h"
-#include "smc/Smc.h"
-#include "ensemble/ensembleOld.h"
-#include "ensemble/ensembleNew.h"
+#include "main/model/Model.h"
+#include "main/algorithms/mcmc/Mcmc.h"
+#include "main/algorithms/smc/Smc.h"
+#include "projects/ensemble/ensembleOld.h"
+#include "projects/ensemble/ensembleNew.h"
 
 
 // this file will contain two functions: one for running a PMCMC/EMCMC algorithms and the other for comparing normalising-constant estimates.

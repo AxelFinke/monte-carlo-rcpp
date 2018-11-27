@@ -4,22 +4,25 @@ nCores <- 1
 ## SETUP PATHS
 ## ========================================================================= ##
 
+pathToMain        <- file.path(pathToInputBase, "main")
+pathToProjects    <- file.path(pathToInputBase, "projects")
+
 # Directories of input files
-pathToInput       <- file.path(pathToInputBase, projectName, "examples", exampleName)
+pathToInput       <- file.path(pathToProjects, projectName, "examples", exampleName)
 pathToData        <- file.path(pathToInput, "data")
 pathToCovar       <- file.path(pathToInput, "covariates")
 pathToSetup       <- file.path(pathToInput, "setup")
 
 # Directories of output files
-pathToOutput      <- file.path(pathToOutputBase, projectName, exampleName, jobName)
+pathToOutput      <- file.path(pathToOutputBase, "projects", projectName, exampleName, jobName)
 pathToFigures     <- file.path(pathToOutput, "figures")
 pathToResults     <- file.path(pathToOutput, "results")
 pathToExtra       <- file.path(pathToOutput, "extra")
 pathToProcessed   <- file.path(pathToOutput, "processed")
 
 # ensure that the above-mentioned directory exist:
-dir.create(file.path(pathToOutputBase, projectName), showWarnings = FALSE) 
-dir.create(file.path(pathToOutputBase, projectName, exampleName), showWarnings = FALSE) 
+dir.create(file.path(pathToOutputBase, "projects", projectName), showWarnings = FALSE) 
+dir.create(file.path(pathToOutputBase, "projects", projectName, exampleName), showWarnings = FALSE) 
 dir.create(pathToOutput,    showWarnings = FALSE)
 dir.create(pathToFigures,   showWarnings = FALSE)
 dir.create(pathToResults,   showWarnings = FALSE)
@@ -67,11 +70,11 @@ if (file.exists(file.path(pathToInput, paste(exampleName, "Functions.r", sep='')
   source(file=file.path(pathToInput, paste(exampleName, "Functions.r", sep='')))
 }
 # Loads R functions related to the current project.
-if (file.exists(file.path(pathToInputBase, projectName, paste(projectName, "Functions.r", sep='')))) {
-  source(file=file.path(pathToInputBase, projectName, paste(projectName, "Functions.r", sep='')))
+if (file.exists(file.path(pathToProjects, projectName, paste(projectName, "Functions.r", sep='')))) {
+  source(file=file.path(pathToProjects, projectName, paste(projectName, "Functions.r", sep='')))
 }
 # Loads other generic R functions.
-source(file=file.path(pathToInputBase, "rFunctions/generic_functions.r"))
+source(file=file.path(pathToInputBase, "tuningParameters.r"))
 
 # Loads parameters for the simulation study.
 if (file.exists(file.path(pathToSetup, paste(jobName, ".r", sep='')))) {

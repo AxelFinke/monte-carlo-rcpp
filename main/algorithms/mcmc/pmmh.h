@@ -9,10 +9,10 @@
 #ifndef __PMMH_H
 #define __PMMH_H
 
-#include "model/Model.h"
-#include "mcmc/Mcmc.h"
-#include "smc/Smc.h"
-#include "smc/default/single.h"
+#include "main/model/Model.h"
+#include "main/algorithms/mcmc/Mcmc.h"
+#include "main/algorithms/smc/Smc.h"
+#include "main/algorithms/smc/default/single.h"
 #include "time.h"
 
 ///////////////////////////////////////////////////////////////////////////////

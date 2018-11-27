@@ -1,6 +1,6 @@
 #include <RcppArmadillo.h>
-#include "optim/Optim.h"
-#include "examples/levy/levy.h"
+#include "projects/optim/Optim.h"
+#include "main/applications/levy/levy.h"
 
 // TODO: disable range checks (by using at() for indexing elements of cubes/matrices/vectors)
 // once the code is tested; 

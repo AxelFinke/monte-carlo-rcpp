@@ -12,7 +12,7 @@
 #include <random>
 #include <iostream>
 #include <vector>
-#include "helperFunctions.h"
+#include "main/helperFunctions/helperFunctions.h"
 
 namespace resample
 {

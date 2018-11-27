@@ -8,8 +8,8 @@
 #ifndef __MULTIVARIATE_H
 #define __MULTIVARIATE_H
 
-#include "templates/dynamic/stateSpace/stateSpace.h"
-#include "smc/default/single.h"
+#include "main/templates/dynamic/stateSpace/stateSpace.h"
+#include "main/algorithms/smc/default/single.h"
 
 ///////////////////////////////////////////////////////////////////////////////
 /// Some types

@@ -10,11 +10,11 @@
 #include <functional>
 #include <math.h>
 
-#include "base/templates/static/univariate/univariate.h"
-#include "base/mcmc/Mcmc.h"
-#include "base/rng/gaussian.h"
-#include "base/envelope.h"
-#include "base/rootFinding.h"
+#include "main/templates/static/univariate/univariate.h"
+#include "main/algorithms/mcmc/Mcmc.h"
+#include "main/rng/gaussian.h"
+#include "main/helperFunctions/envelope.h"
+#include "main/helperFunctions/rootFinding.h"
 
 // [[Rcpp::depends("RcppArmadillo")]]
 
@@ -389,7 +389,7 @@ void Smc<ModelParameters, LatentVariable, LatentPath, LatentPathRepar, Observati
 /*
 /// Simulates observations from the model.
 template <class ModelParameters, class LatentVariable, class LatentPath, class LatentPathRepar, class Observations> 
-void Model<ModelParameters, LatentVariable, LatentPath, LatentPathRepar, Observations>::simulateData()
+void Model<ModelParameters, LatentVariable, LatentPath, LatentPathRepar, Observations>::simulateData(const arma::colvec& extraParameters)
 {
   // Empty (because we are using existing R packages to simulated data)
 }

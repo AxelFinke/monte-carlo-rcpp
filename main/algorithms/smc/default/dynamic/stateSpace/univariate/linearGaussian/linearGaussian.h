@@ -7,7 +7,7 @@
 #ifndef __LINEARGAUSSIAN_H
 #define __LINEARGAUSSIAN_H
 
-#include "smc/default/dynamic/stateSpace/univariate/univariate.h"
-#include "rng/gaussian.h"
+#include "main/algorithms/smc/default/dynamic/stateSpace/univariate/univariate.h"
+#include "main/rng/gaussian.h"
 
 #endif

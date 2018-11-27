@@ -7,8 +7,8 @@
 #ifndef __DYNAMIC_H
 #define __DYNAMIC_H
 
-#include "model/Model.h"
-#include "smc/Smc.h"
+#include "main/model/Model.h"
+#include "main/algorithms/smc/Smc.h"
 
 ///////////////////////////////////////////////////////////////////////////////
 /// Some types

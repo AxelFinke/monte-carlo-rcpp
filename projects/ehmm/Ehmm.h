@@ -11,8 +11,8 @@
 #ifndef __EHMM_H
 #define __EHMM_H
 
-#include "model/Model.h"
-#include "smc/Smc.h"
+#include "main/model/Model.h"
+#include "main/algorithms/smc/Smc.h"
 
 /// Type of proposal for the latent variables.
 enum EhmmProposalType 

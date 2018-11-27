@@ -7,10 +7,10 @@
 #ifndef __STUDENT_H
 #define __STUDENT_H
 
-#include "base/templates/static/univariate/univariate.h"
-#include "base/mcmc/Mcmc.h"
+#include "main/templates/static/univariate/univariate.h"
+#include "main/algorithms/mcmc/Mcmc.h"
 // #include "optim/default/default.h" // TODO: do we really need this dependence?
-#include "base/rng/gaussian.h"
+#include "main/rng/gaussian.h"
 
 // [[Rcpp::depends("RcppArmadillo")]]
 

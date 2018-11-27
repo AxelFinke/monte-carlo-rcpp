@@ -6,8 +6,8 @@
 rm(list = ls())
 set.seed(123)
 
-pathToInputBase   <- "/home/axel/Dropbox/research/code/cpp/mc"
-pathToOutputBase  <- "/home/axel/Dropbox/research/output/cpp/mc"
+pathToInputBase   <- "/home/axel/Dropbox/research/code/cpp/monte-carlo-rcpp"
+pathToOutputBase  <- "/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp"
 exampleName       <- "linear"
 projectName       <- "ensemble"
 jobName           <- "debug"

@@ -12,8 +12,8 @@
 #include <random>
 #include <iostream>
 #include <vector>
-#include "helperFunctions.h"
-#include "smc/resample.h"
+#include "main/helperFunctions/helperFunctions.h"
+#include "main/algorithms/smc/resample.h"
 
 // The following are needed for the Hilbert sort:
 #include <CGAL/Exact_predicates_inexact_constructions_kernel.h>

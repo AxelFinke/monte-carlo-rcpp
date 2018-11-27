@@ -7,9 +7,9 @@
 #ifndef __OPTIM_H
 #define __OPTIM_H
 
-#include "model/Model.h"
-#include "smc/Smc.h"
-#include "mcmc/Mcmc.h"
+#include "main/model/Model.h"
+#include "main/algorithms/smc/Smc.h"
+#include "main/algorithms/mcmc/Mcmc.h"
 
 // TODO: 
 // - implement adaptive resamping at the upper-level SMC sampler

@@ -8,8 +8,8 @@
 #ifndef __MULTIVARIATE_H
 #define __MULTIVARIATE_H
 
-#include "templates/static/static.h"
-#include "smc/default/single.h"
+#include "main/templates/static/static.h"
+#include "main/algorithms/smc/default/single.h"
 
 ///////////////////////////////////////////////////////////////////////////////
 /// Some types

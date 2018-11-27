@@ -8,8 +8,8 @@
 #ifndef __LINEARGAUSSIAN_H
 #define __LINEARGAUSSIAN_H
 
-#include "templates/dynamic/stateSpace/multivariate/multivariate.h"
-#include "rng/gaussian.h"
+#include "main/templates/dynamic/stateSpace/multivariate/multivariate.h"
+#include "main/rng/gaussian.h"
 
 /// Samples a single latent variable at Time t>0 from its conditional prior
 template <class ModelParameters, class LatentVariable, class LatentPath, class LatentPathRepar, class Observations> 

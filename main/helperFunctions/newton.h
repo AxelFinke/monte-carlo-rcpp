@@ -14,7 +14,7 @@
 #include <vector>
 #include <functional>
 #include <math.h>
-#include "helperFunctions.h"
+#include "main/helperFunctions/helperFunctions.h"
 
 namespace findRoot
 {

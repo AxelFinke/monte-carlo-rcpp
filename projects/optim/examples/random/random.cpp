@@ -1,7 +1,7 @@
 #include <RcppArmadillo.h>
 
-#include "optim/Optim.h"
-#include "examples/random/random.h"
+#include "projects/optim/Optim.h"
+#include "main/applications/random/random.h"
 
 // TODO: disable range checks (by using at() for indexing elements of cubes/matrices/vectors)
 // once the code is tested; 

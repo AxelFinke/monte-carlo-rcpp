@@ -14,8 +14,8 @@
 #include <vector>
 #include <time.h> 
 #include <omp.h>
-#include "rng/Rng.h"
-#include "rng/gaussian.h"
+#include "main/rng/Rng.h"
+#include "main/rng/gaussian.h"
 
 
 /// Samples a single value from a multinomial distribution (with size $1$)

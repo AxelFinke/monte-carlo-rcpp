@@ -2,9 +2,9 @@
 #include <RcppArmadillo.h>
 // #include <gperftools/profiler.h>
 
-#include "mcmc/pmmh.h"
-#include "smc/SmcSampler.h"
-#include "examples/herons/herons.h"
+#include "main/algorithms/mcmc/pmmh.h"
+#include "main/algorithms/smc/SmcSampler.h"
+#include "main/applications/herons/herons.h"
 // #include "examples/herons/heronsContinuous.h"
 #include "time.h"
 
@@ -64,7 +64,8 @@ Rcpp::List simulateDataCpp
   std::mt19937 engine; 
   RngDerived<std::mt19937> rngDerived(engine);
   Model<ModelParameters, LatentVariable, LatentPath, LatentPathRepar, Observations> model(rngDerived, hyperParameters, theta, nObservationsCount, nCores);
-  model.simulateData();
+  arma::colvec extraParameters; // not used here
+  model.simulateData(extraParameters);
   
 //   model.getLatentPath(latentPath);
 //   model.getObservations(observations);

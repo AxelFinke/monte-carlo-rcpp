@@ -7,11 +7,11 @@
 #ifndef __LEVY_H
 #define __LEVY_H
 
-#include "templates/dynamic/stateSpace/stateSpace.h"
-#include "/mwg/Mwg.h"
-#include "/smc/Smc.h"
-#include "/ehmm/Ehmm.h" // TODO: implement this!
-#include "rng/gaussian.h"
+#include "main/templates/dynamic/stateSpace/stateSpace.h"
+#include "main/algorithms/mwg/Mwg.h"
+#include "main/algorithms/smc/Smc.h"
+// #include "/ehmm/Ehmm.h" // TODO: implement this!
+#include "main/rng/gaussian.h"
 
 // [[Rcpp::depends("RcppArmadillo")]]
 
@@ -805,7 +805,7 @@ void Model<ModelParameters, LatentVariable, LatentPath, LatentPathRepar, Observa
 }
 /// Simulates count data from state-space model.
 template <class ModelParameters, class LatentVariable, class LatentPath, class LatentPathRepar, class Observations> 
-void Model<ModelParameters, LatentVariable, LatentPath, LatentPathRepar, Observations>::simulateData()
+void Model<ModelParameters, LatentVariable, LatentPath, LatentPathRepar, Observations>::simulateData(const arma::colvec& extraParameters)
 {
   
   nObservations_ = modelParameters_.getNObservations(); // TODO: implement this

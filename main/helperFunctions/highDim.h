@@ -11,10 +11,10 @@
 #include <RcppArmadillo.h>
 #include <omp.h>
 #include <vector>
-#include "rng/Rng.h"
-#include "rng/gaussian.h"
-#include "helperFunctions.h"
-#include "kalman.h"
+#include "main/rng/Rng.h"
+#include "main/rng/gaussian.h"
+#include "main/helperFunctions/helperFunctions.h"
+#include "main/helperFunctions/kalman.h"
 
 namespace highDim
 {

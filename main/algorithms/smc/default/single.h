@@ -7,7 +7,7 @@
 #ifndef __SINGLE_H
 #define __SINGLE_H
 
-#include "smc/Smc.h"
+#include "main/algorithms/smc/Smc.h"
 /*
 /// Runs an SMC algorithm.
 template <class ModelParameters, class LatentVariable, class LatentPath, class LatentPathRepar, class Observations, class Particle, class Aux, class SmcParameters> 

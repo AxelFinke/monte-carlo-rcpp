@@ -1,9 +1,9 @@
 #include <RcppArmadillo.h>
 
-#include "ensemble/comparison.h"
-#include "examples/linear/linear.h"
-#include "examples/linear/linearEnsemble.h"
-#include "kalman.h"
+#include "projects/ensemble/comparison.h"
+#include "main/applications/linear/linear.h"
+#include "main/applications/linear/linearEnsemble.h"
+#include "main/helperfunctions/kalman.h"
 
 // TODO: disable range checks (by using at() for indexing elements of cubes/matrices/vectors)
 // once the code is tested; 

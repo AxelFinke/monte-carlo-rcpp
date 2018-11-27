@@ -7,8 +7,8 @@
 #define __SMC_H
 
 #include <time.h> 
-#include "model/Model.h"
-#include "smc/resample.h"
+#include "main/model/Model.h"
+#include "main/algorithms/smc/resample.h"
 // #include "smc/hilbertResample.h"
 
 // [[Rcpp::depends("RcppArmadillo")]]

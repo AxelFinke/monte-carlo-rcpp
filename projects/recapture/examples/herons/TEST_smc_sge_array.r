@@ -6,8 +6,8 @@ rm(list = ls())
 DEBUG <- TRUE
 
 if (DEBUG) {
-  pathToInputBase   <- "/home/axel/Dropbox/research/code/cpp/mc"
-  pathToOutputBase  <- "/home/axel/Dropbox/research/output/cpp/mc"
+  pathToInputBase   <- "/home/axel/Dropbox/research/code/cpp/monte-carlo-rcpp" # put the path to the monte-carlo-rcpp directory here
+  pathToOutputBase  <- "/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp" # put the path to the folder which whill contain the simulation output here
   jobName           <- "smc_sge_array_debug"
 } else {
   pathToInputBase   <- "/home/ucakafi/code/cpp/mc"

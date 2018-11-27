@@ -7,7 +7,7 @@
 #ifndef __DEFAULT_H
 #define __DEFAULT_H
 
-#include "optim/Optim.h"
+#include "projects/optim/Optim.h"
 
 // [[Rcpp::depends("RcppArmadillo")]]
 

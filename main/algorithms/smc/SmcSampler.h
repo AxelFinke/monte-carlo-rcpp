@@ -10,10 +10,10 @@
 
 // #include <time.h> 
 
-#include "model/Model.h"
-#include "smc/Smc.h"
+#include "main/model/Model.h"
+#include "main/algorithms/smc/Smc.h"
 // #include "smc/default/single.h"
-#include "rootFinding.h"
+#include "main/helperFunctions/rootFinding.h"
 
 // [[Rcpp::depends("RcppArmadillo")]]
 

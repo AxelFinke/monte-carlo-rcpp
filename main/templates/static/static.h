@@ -8,8 +8,8 @@
 #ifndef __STATIC_H
 #define __STATIC_H
 
-#include "model/Model.h"
-#include "smc/Smc.h"
+#include "main/model/Model.h"
+#include "main/algorithms/smc/Smc.h"
 
 
 ///////////////////////////////////////////////////////////////////////////////

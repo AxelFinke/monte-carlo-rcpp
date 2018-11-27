@@ -2,8 +2,9 @@ rm(list = ls())
 set.seed(123)
 library(abind)
 
-pathToInputBase   <- "/home/axel/Dropbox/research/code/cpp/mc"
-pathToOutputBase  <- "/home/axel/Dropbox/research/output/cpp/mc"
+pathToInputBase   <- "/home/axel/Dropbox/research/code/cpp/monte-carlo-rcpp" # put the path to the monte-carlo-rcpp directory here
+pathToOutputBase  <- "/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp" # put the path to the folder which whill contain the simulation output here
+
 
 exampleName       <- "herons"
 # exampleName       <- "owls"
@@ -299,7 +300,7 @@ LTY_PRIOR    <- 2
 
 
 
-pathToMcmcResults <- "/home/axel/Dropbox/research/output/cpp/mc/recapture/owls/mcmc_sge_array_2017-06-04/results/"
+pathToMcmcResults <- "/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recapture/owls/mcmc_sge_array_2017-06-04/results/"
 MAX_SIM_MCMC <- 2
 
 
@@ -419,10 +420,10 @@ colSmcBenchmark <- "red"
 # colMcmc         <- "black"
 colPrior        <- "black"
 
-# pathToMcmcResults         <- "/home/axel/Dropbox/research/output/cpp/mc/recapture/owls/mcmc_sge_array_2017-06-04/results"
-pathToSmcSingleResults    <- "/home/axel/Dropbox/research/output/cpp/mc/recapture/owls/smc_sge_array_2017-08-01/results"
-pathToSmcDoubleResults    <- "/home/axel/Dropbox/research/output/cpp/mc/recapture/owls/smc_sge_array_2017-08-02/results"
-pathToSmcBenchmarkResults <- "/home/axel/Dropbox/research/output/cpp/mc/recapture/owls/smc_sge_array_2017-08-03/results"
+# pathToMcmcResults         <- "/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recapture/owls/mcmc_sge_array_2017-06-04/results"
+pathToSmcSingleResults    <- "/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recapture/owls/smc_sge_array_2017-08-01/results"
+pathToSmcDoubleResults    <- "/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recapture/owls/smc_sge_array_2017-08-02/results"
+pathToSmcBenchmarkResults <- "/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recapture/owls/smc_sge_array_2017-08-03/results"
 
 # idxReplicatesMcmc         <- c(1,2)
 idxReplicatesSmcSingle    <- (1:100)[-c(1,82)]
@@ -433,7 +434,7 @@ idxReplicatesSmcBenchmark <- c(1:3, 5:7)
 # idxConfigurationSmc  <- 3
 
 imageType <- "pdf"
-pathToFiguresAux <- "/home/axel/Dropbox/research/output/cpp/mc/recapture/owls"
+pathToFiguresAux <- "/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recapture/owls"
 
 exampleName       <- "owls"
 projectName       <- "recapture"
@@ -533,7 +534,7 @@ modelCol <- c("black", "gray", "red", "darkblue", "lightblue", "darkgreen", "lig
 mycol <- modelCol
 mylty <- rep(1, times=N_CONFIGS)
 
-pathToOutputOld <- "/home/axel/Dropbox/research/output/cpp/mc/recapture/owls/smc_sge_array_2017-05-29"
+pathToOutputOld <- "/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recapture/owls/smc_sge_array_2017-05-29"
 op <- par(mfrow=c(1,2))
 plot(1:2000, rep(1,2000), col="white", ylim=c(0,1))
 for (jj in 1:JJ) {
@@ -596,7 +597,7 @@ plot(1:600, rep(1,600), col="white", ylim=c(0,1))
 for (jj in 1:1) {
   for (ii in 1:4) {
 #     print(c(ii, jj))
-    aux <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/mc/recapture/herons/smc_sge_array_debug/results/inverseTemperatures_", ii, "_", jj, ".rds", sep=''))
+    aux <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recapture/herons/smc_sge_array_debug/results/inverseTemperatures_", ii, "_", jj, ".rds", sep=''))
     print(length(aux))
     lines(c(aux), type='l', lty=mylty[ii], col=mycol[ii])
   }
@@ -607,7 +608,7 @@ JJ <- 1 # no. of replicates
 logZ <- matrix(NA, II, JJ)
 for (ii in 1:II) {
   for (jj in 1:JJ) {
-    logZ[ii,jj] <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/mc/recapture/herons/smc_sge_array_debug/results/standardLogEvidenceEstimate_", ii, "_", jj, ".rds", sep=''))
+    logZ[ii,jj] <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recapture/herons/smc_sge_array_debug/results/standardLogEvidenceEstimate_", ii, "_", jj, ".rds", sep=''))
   }
 }
 print(logZ)
@@ -618,7 +619,7 @@ boxplot(t(logZ),range=0,las=2)
 II <- 4
 JJ <- 1
 ii <- 3
-param   <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/mc/recapture/herons/smc_sge_array_debug/raw/parameters_", ii, "_", jj, ".rds", sep=''))
+param   <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recapture/herons/smc_sge_array_debug/raw/parameters_", ii, "_", jj, ".rds", sep=''))
 dimTheta <- dim(param)[1]
 
 op <- par(mfrow=c(ceiling(sqrt(dimTheta)),ceiling(sqrt(dimTheta))))
@@ -626,9 +627,9 @@ for (kk in 1:dimTheta) {
   plot(1:10, rep(1,10), col="white", ylim=c(0,10), xlim=c(-5,10))
   
   for (jj in 1:JJ) {
-  weights <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/mc/recapture/herons/smc_sge_array_debug/raw/selfNormalisedWeights_", ii, "_", jj, ".rds", sep=''))
-  param   <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/mc/recapture/herons/smc_sge_array_debug/raw/parameters_", ii, "_", jj, ".rds", sep=''))
-  invTemp <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/mc/recapture/herons/smc_sge_array_debug/results/inverseTemperatures_", ii, "_", jj, ".rds", sep=''))
+  weights <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recapture/herons/smc_sge_array_debug/raw/selfNormalisedWeights_", ii, "_", jj, ".rds", sep=''))
+  param   <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recapture/herons/smc_sge_array_debug/raw/parameters_", ii, "_", jj, ".rds", sep=''))
+  invTemp <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recapture/herons/smc_sge_array_debug/results/inverseTemperatures_", ii, "_", jj, ".rds", sep=''))
   nSteps <- length(invTemp)
     for (ll in seq(from=1, to=nSteps, length=10)) {
       lines(density(param[kk,,ll], weights=weights[,ll]), type='l', lty=mylty[ii], col=mycol[ii])
@@ -660,8 +661,8 @@ plot(1:600, rep(1,600), col="white", xlim=c(0,1), ylim=c(0.7,1), xlab="inverse t
 for (jj in 1:JJ) {
   for (ii in 1:(II/2)) {
 #     print(c(ii, jj))
-    aux1 <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/mc/recycling/random/smc_sge_array_debug/results/inverseTemperatures_", ii, "_", jj, ".rds", sep=''))
-    aux2 <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/mc/recycling/random/smc_sge_array_debug/results/maxParticleAutocorrelations_", ii, "_", jj, ".rds", sep=''))
+    aux1 <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recycling/random/smc_sge_array_debug/results/inverseTemperatures_", ii, "_", jj, ".rds", sep=''))
+    aux2 <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recycling/random/smc_sge_array_debug/results/maxParticleAutocorrelations_", ii, "_", jj, ".rds", sep=''))
     print(length(aux1))
     lines(c(aux1[-1]), c(aux2), type='l', lty=mylty[ii], col=mycol[ii])
   }
@@ -670,8 +671,8 @@ plot(1:600, rep(1,600), col="white", xlim=c(0,1), ylim=c(0.7,1), xlab="inverse t
 for (jj in 1:JJ) {
   for (ii in (II/2+1):II) {
 #     print(c(ii, jj))
-    aux1 <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/mc/recycling/random/smc_sge_array_debug/results/inverseTemperatures_", ii, "_", jj, ".rds", sep=''))
-    aux2 <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/mc/recycling/random/smc_sge_array_debug/results/maxParticleAutocorrelations_", ii, "_", jj, ".rds", sep=''))
+    aux1 <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recycling/random/smc_sge_array_debug/results/inverseTemperatures_", ii, "_", jj, ".rds", sep=''))
+    aux2 <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recycling/random/smc_sge_array_debug/results/maxParticleAutocorrelations_", ii, "_", jj, ".rds", sep=''))
     print(length(aux1))
     lines(c(aux1[-1]), c(aux2), type='l', lty=mylty[ii], col=mycol[ii])
   }
@@ -702,12 +703,12 @@ cpuTimeActual          <- matrix(NA, II, JJ)
   
 for (ii in 1:II) {
   for (jj in 1:JJ) {
-#     logZAll[,ii,jj]      <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/mc/recycling/random/smc_sge_array_debug/results/alternateLogEvidenceEstimate_", ii, "_", jj, ".rds", sep=''))
+#     logZAll[,ii,jj]      <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recycling/random/smc_sge_array_debug/results/alternateLogEvidenceEstimate_", ii, "_", jj, ".rds", sep=''))
 
-    logZAll[,ii,jj]      <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/mc/recycling/random/smc_sge_array_debug/results/standardLogEvidenceEstimate_", ii, "_", jj, ".rds", sep=''))
+    logZAll[,ii,jj]      <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recycling/random/smc_sge_array_debug/results/standardLogEvidenceEstimate_", ii, "_", jj, ".rds", sep=''))
 
-    nSteps[ii,jj]        <- length(readRDS(paste("/home/axel/Dropbox/research/output/cpp/mc/recycling/random/smc_sge_array_debug/results/inverseTemperatures_", ii, "_", jj, ".rds", sep='')))
-    cpuTimeActual[ii,jj] <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/mc/recycling/random/smc_sge_array_debug/results/cpuTime_", ii, "_", jj, ".rds", sep=''))
+    nSteps[ii,jj]        <- length(readRDS(paste("/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recycling/random/smc_sge_array_debug/results/inverseTemperatures_", ii, "_", jj, ".rds", sep='')))
+    cpuTimeActual[ii,jj] <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recycling/random/smc_sge_array_debug/results/cpuTime_", ii, "_", jj, ".rds", sep=''))
   }
     
   cpuTimeTheoretical[ii,] <- nSteps[ii,] * N_METROPOLIS_HASTINGS_UPDATES[ii] * N_PARTICLES_UPPER[ii]
@@ -792,9 +793,9 @@ print(rowMeans(nSteps))
 #   plot(1:10, rep(1,10), col="white", ylim=c(0,10), xlim=c(-5,20))
 #   
 #   for (jj in 1:JJ) {
-#   weights <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/mc/recycling/random/smc_sge_array_debug/raw/selfNormalisedWeights_", ii, "_", jj, ".rds", sep=''))
-#   param   <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/mc/recycling/random/smc_sge_array_debug/raw/parameters_", ii, "_", jj, ".rds", sep=''))
-#   invTemp <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/mc/recycling/random/smc_sge_array_debug/results/inverseTemperatures_", ii, "_", jj, ".rds", sep=''))
+#   weights <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recycling/random/smc_sge_array_debug/raw/selfNormalisedWeights_", ii, "_", jj, ".rds", sep=''))
+#   param   <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recycling/random/smc_sge_array_debug/raw/parameters_", ii, "_", jj, ".rds", sep=''))
+#   invTemp <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recycling/random/smc_sge_array_debug/results/inverseTemperatures_", ii, "_", jj, ".rds", sep=''))
 #   nSteps <- length(invTemp)
 #     for (ll in seq(from=1, to=nSteps, length=10)) {
 #       lines(density(param[kk,,ll], weights=weights[,ll]), type='l', lty=mylty[ii], col=mycol[ii])
@@ -809,7 +810,7 @@ print(rowMeans(nSteps))
 # for (jj in 1:JJ) {
 #   for (ii in 1:II) {
 #     print(c(ii, jj))
-#     aux <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/mc/recycling/random/smc_sge_array_debug/results/inverseTemperatures_", ii, "_", jj, ".rds", sep=''))
+#     aux <- readRDS(paste("/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp/projects/recycling/random/smc_sge_array_debug/results/inverseTemperatures_", ii, "_", jj, ".rds", sep=''))
 #     print(length(aux))
 #     lines(c(aux), type='l', lty=mylty[ii], col=mycol[ii])
 #   }

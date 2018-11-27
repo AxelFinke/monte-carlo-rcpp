@@ -7,10 +7,10 @@
 #ifndef __LINEAR_H
 #define __LINEAR_H
 
-#include "base/templates/dynamic/stateSpace/multivariate/linearGaussian/linearGaussian.h"
-#include "base/mcmc/Mcmc.h"
+#include "main/templates/dynamic/stateSpace/multivariate/linearGaussian/linearGaussian.h"
+#include "main/algorithms/mcmc/Mcmc.h"
 // #include "projects/optim/default/default.h" // TODO: are we really using this?
-#include "base/kalman.h"
+#include "main/helperFunctions/kalman.h"
 // #include "base/highDim.h" // TODO: are we really using this?
 
 // [[Rcpp::depends("RcppArmadillo")]]

@@ -1,7 +1,7 @@
 #include <RcppArmadillo.h>
 
-#include "optim/Optim.h"
-#include "examples/linear/linear.h"
+#include "projects/optim/Optim.h"
+#include "main/applications/linear/linear.h"
 
 // TODO: disable range checks (by using at() for indexing elements of cubes/matrices/vectors)
 // once the code is tested; 

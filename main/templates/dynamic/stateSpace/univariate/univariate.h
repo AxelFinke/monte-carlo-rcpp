@@ -8,8 +8,8 @@
 #ifndef __UNIVARIATE_H
 #define __UNIVARIATE_H
 
-#include "templates/dynamic/stateSpace/stateSpace.h"
-#include "smc/default/single.h"
+#include "main/templates/dynamic/stateSpace/stateSpace.h"
+#include "main/algorithms/smc/default/single.h"
 
 
 ///////////////////////////////////////////////////////////////////////////////

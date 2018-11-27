@@ -8,9 +8,9 @@
 #ifndef __LINEARENSEMBLE_H
 #define __LINEARENSEMBLE_H
 
-#include "examples/linear/linear.h"
-#include "projects/ensemble/ensembleOld.h"
-#include "projects/ensemble/ensembleNew.h"
+#include "main/applications/linear/linear.h"
+#include "projects/ensemble/ensembleOld.h" // TODO! this file shouldn't depend on these
+#include "projects/ensemble/ensembleNew.h" // TODO! this file shouldn't depend on these!
 
 ////////////////////////////////////////////////////////////////////////////////
 // Containers associated with the algorithm

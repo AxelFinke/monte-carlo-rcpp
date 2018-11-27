@@ -12,10 +12,10 @@
 // #include <gperftools/profiler.h>
 #include <iostream>
 #include <vector>
-#include "base/rng/Rng.h"
-#include "base/rng/gaussian.h"
-#include "base/helperFunctions.h"
-#include "base/smc/resample.h"
+#include "main/rng/Rng.h"
+#include "main/rng/gaussian.h"
+#include "main/helperFunctions/helperFunctions.h"
+#include "main/algorithms/smc/resample.h"
 
 ////////////////////////////////////////////////////////////////////////////////
 // Obtain log-marginal likelihood via the Kalman filter

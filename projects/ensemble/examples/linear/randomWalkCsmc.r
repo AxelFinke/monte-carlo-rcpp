@@ -3,7 +3,7 @@
 
 
 ### TODO: change dimensions to c(1,2,5,10,20,50)
-### 4628450035255489
+### 
 
 ## ========================================================================= ##
 ## SETUP
@@ -16,8 +16,8 @@
 rm(list = ls())
 set.seed(123)
 
-pathToInputBase   <- "/home/axel/Dropbox/research/code/cpp/mc"
-pathToOutputBase  <- "/home/axel/Dropbox/research/output/cpp/mc"
+pathToInputBase   <- "/home/axel/Dropbox/research/code/cpp/monte-carlo-rcpp" # put the path to the monte-carlo-rcpp directory here
+pathToOutputBase  <- "/home/axel/Dropbox/research/output/cpp/monte-carlo-rcpp" # put the path to the folder which whill contain the simulation output here
 exampleName       <- "linear"
 projectName       <- "ensemble"
 jobName           <- "debug"
